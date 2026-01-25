@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Minecraft Hub - Коллекция крутых скинов для Minecraft">
+    <title>Minecraft Hub - Скины</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/minecraft.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>⛏️ Minecraft Hub</h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Главная</a>
+                    <a href="seeds.html" class="nav-link">Сиды</a>
+                    <a href="features.html" class="nav-link">Фишки</a>
+                    <a href="skins.html" class="nav-link active">Скины</a>
+                    <a href="license.html" class="nav-link">Лицензия</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Skins Section -->
+    <section class="skins-section" style="padding-top: 120px;">
+        <div class="container">
+            <h2 class="section-title">🎨 Коллекция Скинов</h2>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem;">
+                Выберите и скачайте крутой скин для своего персонажа
+            </p>
+
+            <div class="skins-filters">
+                <button class="btn-minecraft btn-primary-mc filter-btn active" data-filter="all">Все</button>
+                <button class="btn-minecraft btn-secondary-mc filter-btn" data-filter="hero">Герои</button>
+                <button class="btn-minecraft btn-tertiary-mc filter-btn" data-filter="anime">Аниме</button>
+                <button class="btn-minecraft btn-gold-mc filter-btn" data-filter="fantasy">Фэнтези</button>
+                <button class="btn-minecraft btn-redstone-mc filter-btn" data-filter="gaming">Игровые</button>
+            </div>
+
+            <div class="skins-grid" id="skinsGrid">
+                <!-- Скины будут добавлены через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Minecraft Hub. Все права защищены.</p>
+                <p>Создано с ❤️ для сообщества Minecraft</p>
+                <div class="footer-links">
+                    <a href="license.html">Лицензия</a>
+                    <a href="index.html">Главная</a>
+                    <a href="seeds.html">Сиды</a>
+                    <a href="features.html">Фишки</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Skin Details -->
+    <div id="skinModal" class="modal" style="display: none;">
+        <div class="modal-content card-minecraft" style="max-width: 500px; width: 90%; position: relative;">
+            <span class="close" style="position: absolute; top: 1rem; right: 1rem; font-size: 2rem; cursor: pointer; color: var(--text-secondary);">&times;</span>
+            <h2 id="skinModalTitle" style="margin-bottom: 1rem; color: var(--mc-emerald);"></h2>
+            <div id="skinModalBody"></div>
+            <button id="downloadSkinBtn" class="btn-minecraft btn-primary-mc" style="margin-top: 1rem; width: 100%;">Скачать скин</button>
+        </div>
+    </div>
+
+    <script src="js/skins.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

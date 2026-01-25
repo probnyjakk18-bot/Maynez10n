@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Minecraft Hub - Коллекция лучших сидов для Minecraft">
+    <title>Minecraft Hub - Сиды</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/minecraft.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>⛏️ Minecraft Hub</h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Главная</a>
+                    <a href="seeds.html" class="nav-link active">Сиды</a>
+                    <a href="features.html" class="nav-link">Фишки</a>
+                    <a href="skins.html" class="nav-link">Скины</a>
+                    <a href="license.html" class="nav-link">Лицензия</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seeds Section -->
+    <section class="seeds-section" style="padding-top: 120px;">
+        <div class="container">
+            <h2 class="section-title">🌱 Популярные Сиды</h2>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">
+                Выберите готовый сид или создайте свой уникальный мир
+            </p>
+            
+            <div class="seeds-grid" id="seedsGrid">
+                <!-- Сиды будут добавлены через JavaScript -->
+            </div>
+
+            <!-- Custom Seed Creator -->
+            <div class="seed-creator card-minecraft animate-fade-in" style="margin-top: 3rem;">
+                <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--mc-emerald); font-size: 1.8rem;">
+                    ✨ Создайте свой сид
+                </h3>
+                
+                <div class="creator-form">
+                    <input 
+                        type="text" 
+                        id="customSeedInput" 
+                        class="input-minecraft" 
+                        placeholder="Введите число или текст для сида..."
+                        style="flex: 1; margin-right: 1rem;"
+                    >
+                    <button id="generateSeedBtn" class="btn-minecraft btn-primary-mc">Сгенерировать</button>
+                </div>
+
+                <!-- Фильтры биомов -->
+                <div class="biome-filters" style="margin-top: 2rem;">
+                    <h4 style="color: var(--mc-diamond); margin-bottom: 1rem; text-align: center;">Выберите желаемые биомы:</h4>
+                    <div class="filters-grid">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="biome-filter" value="plains" checked>
+                            <span>Равнины</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="biome-filter" value="forest" checked>
+                            <span>Лес</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="biome-filter" value="desert">
+                            <span>Пустыня</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="biome-filter" value="ocean">
+                            <span>Океан</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="biome-filter" value="mountains">
+                            <span>Горы</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="biome-filter" value="snow">
+                            <span>Снег</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="biome-filter" value="jungle">
+                            <span>Джунгли</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="biome-filter" value="mesa">
+                            <span>Меса</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="biome-filter" value="swamp">
+                            <span>Болото</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="biome-filter" value="taiga">
+                            <span>Тайга</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Дополнительные фильтры -->
+                <div class="additional-filters" style="margin-top: 1.5rem;">
+                    <h4 style="color: var(--mc-diamond); margin-bottom: 1rem; text-align: center;">Особенности:</h4>
+                    <div class="filters-grid">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="feature-filter" value="village">
+                            <span>Деревни</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="feature-filter" value="dungeon">
+                            <span>Данжи</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="feature-filter" value="temple">
+                            <span>Храмы</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="feature-filter" value="mansion">
+                            <span>Мансионы</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="feature-filter" value="stronghold">
+                            <span>Крепости</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="feature-filter" value="mineshaft">
+                            <span>Шахты</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="customSeedResult" class="seed-result animate-slide-up" style="display: none; margin-top: 1.5rem;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map" class="map-section">
+        <div class="container">
+            <h2 class="section-title">🗺️ Карта Построек и Данжей</h2>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">
+                Исследуйте локации на интерактивной карте
+            </p>
+            <div class="map-container card-minecraft">
+                <div class="map-controls">
+                    <button id="zoomIn" class="btn-minecraft btn-secondary-mc">+</button>
+                    <button id="zoomOut" class="btn-minecraft btn-secondary-mc">-</button>
+                    <button id="resetMap" class="btn-minecraft btn-secondary-mc">⟲</button>
+                </div>
+                <div class="map-wrapper">
+                    <canvas id="mapCanvas"></canvas>
+                    <div id="mapLegend" class="map-legend">
+                        <div class="legend-item">
+                            <span class="legend-icon" style="background: #4CAF50;"></span>
+                            <span>Постройки</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-icon" style="background: #F44336;"></span>
+                            <span>Данжи</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-icon" style="background: #2196F3;"></span>
+                            <span>Деревни</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Minecraft Hub. Все права защищены.</p>
+                <p>Создано с ❤️ для сообщества Minecraft</p>
+                <div class="footer-links">
+                    <a href="license.html">Лицензия</a>
+                    <a href="index.html">Главная</a>
+                    <a href="features.html">Фишки</a>
+                    <a href="skins.html">Скины</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Seed Details -->
+    <div id="seedModal" class="modal" style="display: none;">
+        <div class="modal-content card-minecraft" style="max-width: 600px; width: 90%; position: relative;">
+            <span class="close" style="position: absolute; top: 1rem; right: 1rem; font-size: 2rem; cursor: pointer; color: var(--text-secondary);">&times;</span>
+            <h2 id="modalTitle" style="margin-bottom: 1rem; color: var(--mc-emerald);"></h2>
+            <div id="modalBody"></div>
+            <button id="copySeedBtn" class="btn-minecraft btn-primary-mc" style="margin-top: 1rem; width: 100%;">Копировать сид</button>
+        </div>
+    </div>
+
+    <script src="js/seeds.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Minecraft Hub - Полезные фишки и трюки для Minecraft">
+    <title>Minecraft Hub - Фишки</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/minecraft.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>⛏️ Minecraft Hub</h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Главная</a>
+                    <a href="seeds.html" class="nav-link">Сиды</a>
+                    <a href="features.html" class="nav-link active">Фишки</a>
+                    <a href="skins.html" class="nav-link">Скины</a>
+                    <a href="license.html" class="nav-link">Лицензия</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features-page-section" style="padding-top: 120px;">
+        <div class="container">
+            <h2 class="section-title">✨ Полезные Фишки</h2>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem;">
+                Секреты, трюки и полезные советы для улучшения геймплея
+            </p>
+
+            <div class="features-categories">
+                <button class="btn-minecraft btn-primary-mc category-btn active" data-category="all">Все</button>
+                <button class="btn-minecraft btn-secondary-mc category-btn" data-category="building">Строительство</button>
+                <button class="btn-minecraft btn-tertiary-mc category-btn" data-category="survival">Выживание</button>
+                <button class="btn-minecraft btn-gold-mc category-btn" data-category="redstone">Редстоун</button>
+                <button class="btn-minecraft btn-redstone-mc category-btn" data-category="pvp">PvP</button>
+            </div>
+
+            <div class="features-list" id="featuresList">
+                <!-- Фишки будут добавлены через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Minecraft Hub. Все права защищены.</p>
+                <p>Создано с ❤️ для сообщества Minecraft</p>
+                <div class="footer-links">
+                    <a href="license.html">Лицензия</a>
+                    <a href="index.html">Главная</a>
+                    <a href="seeds.html">Сиды</a>
+                    <a href="skins.html">Скины</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/features.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
